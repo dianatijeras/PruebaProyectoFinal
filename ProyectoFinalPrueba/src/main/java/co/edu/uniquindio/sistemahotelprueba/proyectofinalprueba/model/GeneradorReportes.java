@@ -1,12 +1,5 @@
 package co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-@AllArgsConstructor
-@Getter
-@Setter
 public class GeneradorReportes {
 
     private Parque parque;

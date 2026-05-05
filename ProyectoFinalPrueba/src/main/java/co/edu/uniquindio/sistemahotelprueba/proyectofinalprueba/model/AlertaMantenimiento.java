@@ -1,19 +1,60 @@
 package co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import java.time.LocalDateTime;
 
-import java.util.Date;
-
-@AllArgsConstructor
-@Getter
-@Setter
 public class AlertaMantenimiento {
 
     private String id;
     private Atraccion atraccion;
-    private Date fechaGeneracion;
+    private LocalDateTime fechaGeneracion;
     private boolean atendida;
 
+    public AlertaMantenimiento(String id, Atraccion atraccion) {
+        this.id = id;
+        this.atraccion = atraccion;
+        this.fechaGeneracion = LocalDateTime.now();
+        this.atendida = false;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Atraccion getAtraccion() {
+        return atraccion;
+    }
+
+    public void setAtraccion(Atraccion atraccion) {
+        this.atraccion = atraccion;
+    }
+
+    public LocalDateTime getFechaGeneracion() {
+        return fechaGeneracion;
+    }
+
+    public void setFechaGeneracion(LocalDateTime fechaGeneracion) {
+        this.fechaGeneracion = fechaGeneracion;
+    }
+
+    public boolean isAtendida() {
+        return atendida;
+    }
+
+    public void setAtendida(boolean atendida) {
+        this.atendida = atendida;
+    }
+
+    @Override
+    public String toString() {
+        return "AlertaMantenimiento{" +
+                "id='" + id + '\'' +
+                ", atraccion=" + atraccion +
+                ", fechaGeneracion=" + fechaGeneracion +
+                ", atendida=" + atendida +
+                '}';
+    }
 }

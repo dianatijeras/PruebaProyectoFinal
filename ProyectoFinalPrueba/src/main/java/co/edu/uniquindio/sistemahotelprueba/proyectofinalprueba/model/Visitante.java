@@ -5,7 +5,6 @@ import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.List
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.NodoGrafo;
 
 import java.util.List;
-import java.util.Set;
 
 public class Visitante extends Usuario{
 

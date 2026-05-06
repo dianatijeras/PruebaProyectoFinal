@@ -1,4 +1,5 @@
-module co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba {
+module co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba
+{
     requires javafx.controls;
     requires javafx.fxml;
 

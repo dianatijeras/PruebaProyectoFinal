@@ -1,9 +1,6 @@
 package co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.pruebas;
 
-import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.EstadoAtraccion;
-import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.Rol;
-import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.TipoAtraccion;
-import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.TipoTicket;
+import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.*;
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.*;
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.model.*;
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.servicios.ServicioAcceso;
@@ -235,13 +232,13 @@ public class PruebasUnitarias {
 
         Atraccion acuatica   = new Atraccion("RN-003","Acuática",TipoAtraccion.ACUATICA,10,0,0,0);
         Atraccion mecanica   = new Atraccion("RN-004","Mecánica",TipoAtraccion.MECANICA_ALTURA,10,0,0,0);
-        Atraccion otra       = new Atraccion("RN-005","Otra",TipoAtraccionEnum.OTRA,10,0,0,0);
+        Atraccion otra       = new Atraccion("RN-005","Otra",TipoAtraccion.OTRA,10,0,0,0);
         java.util.List<Atraccion> todas = java.util.Arrays.asList(acuatica, mecanica, otra);
 
-        alertas.activarAlertaClimatica(TipoClimaEnum.TORMENTA_ELECTRICA, todas);
-        afirmar("5f. Acuática CERRADA por clima", acuatica.getEstado() == EstadoAtraccionEnum.CERRADA);
-        afirmar("5f. Mecánica CERRADA por clima", mecanica.getEstado() == EstadoAtraccionEnum.CERRADA);
-        afirmar("5f. Otra NO se cierra por clima (RN-AL02)", otra.getEstado() == EstadoAtraccionEnum.ACTIVA);
+        alertas.activarAlertaClimatica(TipoClima.TORMENTA_ELECTRICA, todas);
+        afirmar("5f. Acuática CERRADA por clima", acuatica.getEstado() == EstadoAtraccion.CERRADA);
+        afirmar("5f. Mecánica CERRADA por clima", mecanica.getEstado() == EstadoAtraccion.CERRADA);
+        afirmar("5f. Otra NO se cierra por clima (RN-AL02)", otra.getEstado() == EstadoAtraccion.ACTIVA);
 
         System.out.println();
     }
@@ -267,9 +264,9 @@ public class PruebasUnitarias {
         afirmar("6d. eliminar reduce tamaño", set.getTamanio() == 2);
         afirmar("6d. ATR-002 ya no existe", !set.contiene("ATR-002"));
 
-        Visitante vis = new Visitante("VS1","Test","D99",20,"h",1.60,10000,null);
-        Atraccion a1  = new Atraccion("FAV-001","FavAtr1",TipoAtraccionEnum.OTRA,5,0,0,0);
-        Atraccion a2  = new Atraccion("FAV-002","FavAtr2",TipoAtraccionEnum.OTRA,5,0,0,0);
+        Visitante vis = new Visitante("VS1","Test","D99",20,"h",Rol.VISITANTE, 1.60,10000,null);
+        Atraccion a1  = new Atraccion("FAV-001","FavAtr1",TipoAtraccion.OTRA,5,0,0,0);
+        Atraccion a2  = new Atraccion("FAV-002","FavAtr2",TipoAtraccion.OTRA,5,0,0,0);
         vis.agregarFavorito(a1);
         vis.agregarFavorito(a2);
         vis.agregarFavorito(a1);

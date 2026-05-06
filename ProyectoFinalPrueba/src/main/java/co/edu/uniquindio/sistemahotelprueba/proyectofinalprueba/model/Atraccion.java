@@ -62,6 +62,11 @@ public class Atraccion {
         return false;
     }
 
+    public void resetearContador() {
+        contadorAcumuladoVisitantes = 0;
+    }
+
+
     public void agregarAColaCola(EntradaEnCola entrada){
         colaVirtual.insertar(entrada);
         actualizarTiempoEspera();

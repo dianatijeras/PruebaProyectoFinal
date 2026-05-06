@@ -52,7 +52,7 @@ public class ReporteJornada {
         return tiemposPromedioEspera;
     }
 
-    public void setTiemposPromedioEspera(Map<Atraccion, Double> tiemposPromedioEspera) {
+    public void setTiemposPromedioEspera(Map<String, Double> tiemposPromedioEspera) {
         this.tiemposPromedioEspera = tiemposPromedioEspera;
     }
 

@@ -58,7 +58,7 @@ public class Parque {
         catalogoUsuarios.insertar(usuario.getDocumento(), usuario);
     }
 
-    public Usuario buscarUsuarioPorDocumentos(String idUsuario){
+    public Usuario buscarUsuarioPorDocumento(String idUsuario){
         return catalogoUsuarios.buscar(idUsuario);
     }
 

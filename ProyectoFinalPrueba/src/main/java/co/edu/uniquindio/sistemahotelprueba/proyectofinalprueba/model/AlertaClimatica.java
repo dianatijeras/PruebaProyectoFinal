@@ -22,6 +22,8 @@ public class AlertaClimatica {
         this.atraccionesAfectadas = new ArrayList<>();
     }
 
+    public void agregarAfectada(Atraccion atraccion){ atraccionesAfectadas.add(atraccion);}
+
     public String getId() {
         return id;
     }

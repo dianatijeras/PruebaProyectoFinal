@@ -2,7 +2,7 @@ package co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.model;
 
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Enum.Rol;
 import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.ListaEnlazada;
-import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.NodoGrafo;
+import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.SetArbol;
 
 import java.util.List;
 

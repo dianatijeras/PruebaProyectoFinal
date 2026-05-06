@@ -40,7 +40,7 @@ public class Zona {
     }
 
     public void agregarOperador (Operador operador){
-        if (! operadoresAsignados.contiene(op -> op.getId().equals(operador.getDocumento()))){
+        if (! operadoresAsignados.contiene(op -> op.getDocumento().equals(operador.getDocumento()))){
             operadoresAsignados.insertarAlFinal(operador);
             operador.setZonaAsignada(this);
         }

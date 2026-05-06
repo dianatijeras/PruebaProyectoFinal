@@ -6,6 +6,8 @@ import co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.Estructuras.Graf
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Locale.filter;
+
 public class Parque {
     private String id;
     private String nombre;
@@ -32,7 +34,7 @@ public class Parque {
         zonas.add(zona);
     }
 
-    public void buscarZona(String idZona){
+    public Zona buscarZona(String idZona) {
         return zonas.stream()
                 .filter(z -> z.getId().equals(idZona))
                 .findFirst()
@@ -56,8 +58,8 @@ public class Parque {
         catalogoUsuarios.insertar(usuario.getDocumento(), usuario);
     }
 
-    public Usuario buscarUsuarioPorDocumentos(string documento){
-        return catalogoUsuarios.buscar(documento);
+    public Usuario buscarUsuarioPorDocumentos(String idUsuario){
+        return catalogoUsuarios.buscar(idUsuario);
     }
 
     public boolean tieneAforoDisponible(){

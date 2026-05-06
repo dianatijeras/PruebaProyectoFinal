@@ -2,7 +2,7 @@ package co.edu.uniquindio.sistemahotelprueba.proyectofinalprueba.model;
 
 import java.time.LocalDateTime;
 
-public class AlertaMantenimiento {
+public class AlertaMantenimiento implements Comparable<AlertaMantenimiento> {
 
     private String id;
     private Atraccion atraccion;
@@ -56,5 +56,14 @@ public class AlertaMantenimiento {
                 ", fechaGeneracion=" + fechaGeneracion +
                 ", atendida=" + atendida +
                 '}';
+    }
+
+    @Override
+    public int compareTo(AlertaMantenimiento other) {
+        return this.fechaGeneracion.compareTo(other.fechaGeneracion);
+    }
+
+    public void marcarAtendida(){
+        this.atendida = true;
     }
 }
